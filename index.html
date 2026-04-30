@@ -82,6 +82,25 @@
     color: transparent;
   }
 
+  /* Editable hero search fields */
+  .field-input,
+  .field-select {
+    background: transparent; border: none; outline: none;
+    color: var(--ink); font: inherit; font-size: 15px;
+    padding: 0; width: 100%; cursor: pointer;
+    appearance: none; -webkit-appearance: none;
+  }
+  .field-input::placeholder { color: rgb(240 244 250 / 0.45); }
+  .field-input:focus, .field-select:focus { outline: none; }
+  .field-select option { background: #161D26; color: var(--ink); }
+  .field-row { display: flex; align-items: center; gap: 6px; }
+  .field-row input { min-width: 0; }
+  /* Native calendar/spinner icons in dark fields — invert for visibility */
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="number"]::-webkit-inner-spin-button {
+    filter: invert(0.85) opacity(0.7); cursor: pointer;
+  }
+
   /* Dark-mode overrides — accents that were dark-on-light now need light-on-dark */
   .text-aegean { color: var(--electric); }
   .text-aegean\/80 { color: rgb(74 123 255 / 0.8); }
@@ -635,35 +654,54 @@
     <!-- Search bar -->
     <form id="hero-search" class="reveal in d-5 relative mt-10 bg-surface/90 backdrop-blur-md border border-ink/15 rounded-3xl md:rounded-full p-2 md:p-1.5 md:pl-2 grid grid-cols-1 md:grid-cols-[1.2fr_1.2fr_0.8fr_auto] items-stretch gap-1 md:gap-0 shadow-deep max-w-[920px]">
       <label class="field flex items-center gap-3 px-5 py-2 cursor-pointer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="text-aegean">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="text-aegean shrink-0">
           <path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/>
           <circle cx="12" cy="9" r="2.5"/>
         </svg>
-        <span class="flex flex-col">
+        <span class="flex flex-col flex-1 min-w-0">
           <span class="eyebrow text-ink/55" data-en="Region">Bölge</span>
-          <span class="text-[15px] text-ink/95">Göcek</span>
+          <select name="region" class="field-select text-[15px] text-ink/95 mt-0.5">
+            <option value="Göcek">Göcek</option>
+            <option value="Bodrum">Bodrum</option>
+            <option value="Marmaris">Marmaris</option>
+            <option value="Fethiye">Fethiye</option>
+            <option value="Datça">Datça</option>
+            <option value="Kaş–Kekova">Kaş–Kekova</option>
+            <option value="Hisarönü">Hisarönü</option>
+            <option value="12 Adalar / Symi">12 Adalar / Symi</option>
+          </select>
         </span>
       </label>
       <label class="field flex items-center gap-3 px-5 py-2 cursor-pointer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="text-aegean">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="text-aegean shrink-0">
           <rect x="3" y="5" width="18" height="16" rx="2"/>
           <path d="M3 9h18M8 3v4M16 3v4"/>
         </svg>
-        <span class="flex flex-col">
+        <span class="flex flex-col flex-1 min-w-0">
           <span class="eyebrow text-ink/55" data-en="Dates">Tarih</span>
-          <span class="text-[15px] text-ink/95" data-en="12 Jul — 19 Jul">12 Tem — 19 Tem</span>
+          <span class="field-row text-[14px] text-ink/95 mt-0.5">
+            <input type="date" name="start" value="2026-07-12" class="field-input" aria-label="Başlangıç tarihi" data-en-aria="Start date" />
+            <span class="text-ink/40">→</span>
+            <input type="date" name="end" value="2026-07-19" class="field-input" aria-label="Bitiş tarihi" data-en-aria="End date" />
+          </span>
         </span>
       </label>
       <label class="field flex items-center gap-3 px-5 py-2 cursor-pointer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="text-aegean">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="text-aegean shrink-0">
           <path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
           <circle cx="9.5" cy="7.5" r="3.5"/>
           <path d="M21 21v-2a4 4 0 0 0-3-3.87"/>
           <path d="M17 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
-        <span class="flex flex-col">
+        <span class="flex flex-col flex-1 min-w-0">
           <span class="eyebrow text-ink/55" data-en="Guests">Misafir</span>
-          <span class="text-[15px] text-ink/95" data-en="8 guests · 4 cabins">8 kişi · 4 kabin</span>
+          <span class="field-row text-[15px] text-ink/95 mt-0.5">
+            <input type="number" name="guests" value="8" min="1" max="20" class="field-input" style="width:2.4em" aria-label="Misafir sayısı" data-en-aria="Number of guests" />
+            <span class="text-ink/55 text-[13px]" data-en="guests">kişi</span>
+            <span class="text-ink/40 mx-1">·</span>
+            <input type="number" name="cabins" value="4" min="1" max="10" class="field-input" style="width:2em" aria-label="Kabin sayısı" data-en-aria="Number of cabins" />
+            <span class="text-ink/55 text-[13px]" data-en="cabins">kabin</span>
+          </span>
         </span>
       </label>
       <button type="submit" class="btn-pill h-[56px] m-0.5">
@@ -2484,19 +2522,32 @@
   const waLink = (msg) => `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
   const t = (tr, en) => (document.documentElement.lang === 'en' ? en : tr);
 
-  // Hero search bar → build a tailored WhatsApp message from the visible field values
+  // Hero search bar → build a tailored WhatsApp message from the form values
   const heroForm = document.getElementById('hero-search');
+  const fmtDate = (iso, lang) => {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString(lang === 'en' ? 'en-GB' : 'tr-TR',
+      { day: '2-digit', month: 'short', year: 'numeric' });
+  };
   heroForm?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const fields = heroForm.querySelectorAll('label.field span:last-child');
-    const region = fields[0]?.textContent.trim() || '';
-    const dates  = fields[1]?.textContent.trim() || '';
-    const guests = fields[2]?.textContent.trim() || '';
+    const lang = document.documentElement.lang || 'tr';
+    const fd = new FormData(heroForm);
+    const region = fd.get('region') || '';
+    const start  = fd.get('start')  || '';
+    const end    = fd.get('end')    || '';
+    const guests = fd.get('guests') || '';
+    const cabins = fd.get('cabins') || '';
+    const datesStr = (start && end)
+      ? `${fmtDate(start, lang)} → ${fmtDate(end, lang)}`
+      : (start || end);
     const activeChip = document.querySelector('[data-chip].is-active');
     const boatType = activeChip?.textContent.trim() || '';
     const msg = t(
-      `Merhaba, yelkentatili.com'dan yazıyorum. Bölge: ${region} · Tarih: ${dates} · Misafir: ${guests}${boatType ? ' · Tekne türü: ' + boatType : ''}. Teklif alabilir miyim?`,
-      `Hi, writing from yelkentatili.com. Region: ${region} · Dates: ${dates} · Guests: ${guests}${boatType ? ' · Boat type: ' + boatType : ''}. May I get a quote?`
+      `Merhaba, yelkentatili.com'dan yazıyorum. Bölge: ${region} · Tarih: ${datesStr} · Misafir: ${guests} kişi, ${cabins} kabin${boatType ? ' · Tekne türü: ' + boatType : ''}. Teklif alabilir miyim?`,
+      `Hi, writing from yelkentatili.com. Region: ${region} · Dates: ${datesStr} · Guests: ${guests} pax, ${cabins} cabins${boatType ? ' · Boat type: ' + boatType : ''}. May I get a quote?`
     );
     window.open(waLink(msg), '_blank', 'noopener');
   });
