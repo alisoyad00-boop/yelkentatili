@@ -27,17 +27,20 @@
     theme: {
       extend: {
         colors: {
-          ink:        '#1B1814',
-          paper:      '#FAF4EC',
-          cream:      '#FFF7EE',
+          ink:        '#F0F4FA',
+          paper:      '#0B1118',
+          cream:      '#F0F4FA',
+          surface:    '#161D26',
+          'surface-2':'#1F2733',
           aegean:     '#0E4351',
           'aegean-2': '#1A6273',
           'aegean-3': '#A8C5C5',
+          electric:   '#4A7BFF',
           ember:      '#FF7849',
           'ember-2':  '#E94B3C',
           'ember-3':  '#8B2635',
           sunset:     '#E94B3C',
-          line:       '#1B181420',
+          line:       '#F0F4FA20',
         },
         fontFamily: {
           display: ['Fraunces', 'Georgia', 'serif'],
@@ -55,12 +58,15 @@
 
 <style>
   :root {
-    --ink: #1B1814;
-    --paper: #FAF4EC;
-    --cream: #FFF7EE;
+    --ink: #F0F4FA;
+    --paper: #0B1118;
+    --cream: #F0F4FA;
+    --surface: #161D26;
+    --surface-2: #1F2733;
     --aegean: #0E4351;
     --aegean-2: #1A6273;
     --aegean-3: #A8C5C5;
+    --electric: #4A7BFF;
     --ember: #FF7849;
     --ember-2: #E94B3C;
     --ember-3: #8B2635;
@@ -75,6 +81,16 @@
     background-clip: text;
     color: transparent;
   }
+
+  /* Dark-mode overrides — accents that were dark-on-light now need light-on-dark */
+  .text-aegean { color: var(--electric); }
+  .text-aegean\/80 { color: rgb(74 123 255 / 0.8); }
+  .text-aegean\/85 { color: rgb(74 123 255 / 0.85); }
+  .text-aegean\/95 { color: rgb(74 123 255 / 0.95); }
+  .border-aegean { border-color: var(--electric); }
+  .hover\:border-aegean:hover { border-color: var(--electric); }
+  .focus\:border-aegean:focus { border-color: var(--electric); }
+  /* keep bg-aegean as deep teal — used for darker section backgrounds */
 
   html { scroll-behavior: smooth; }
   body {
@@ -242,22 +258,23 @@
   .btn-pill {
     display: inline-flex; align-items: center; gap: 10px;
     height: 52px; padding: 0 28px;
-    background: var(--aegean); color: var(--cream);
+    background: var(--electric); color: #FFFFFF;
     border-radius: 999px;
-    font-weight: 500; letter-spacing: 0.02em;
+    font-weight: 600; letter-spacing: 0.01em;
+    box-shadow: 0 1px 2px rgba(74, 123, 255, 0.25), 0 8px 24px -10px rgba(74, 123, 255, 0.45);
   }
-  .btn-pill:hover { background: var(--ink); transform: translateY(-1px); }
+  .btn-pill:hover { background: #6B92FF; transform: translateY(-1px); }
   .btn-pill:active { transform: translateY(0); }
 
   .btn-ghost {
     display: inline-flex; align-items: center; gap: 10px;
     height: 52px; padding: 0 24px;
-    color: var(--aegean);
-    border: 1px solid rgba(14, 67, 81, 0.28);
+    color: var(--electric);
+    border: 1px solid rgba(74, 123, 255, 0.45);
     border-radius: 999px;
     font-weight: 500;
   }
-  .btn-ghost:hover { background: var(--aegean); color: var(--cream); border-color: var(--aegean); }
+  .btn-ghost:hover { background: var(--electric); color: #FFFFFF; border-color: var(--electric); }
 
   /* Image color treatment */
   .img-treat {
@@ -616,7 +633,7 @@
     <div class="flex-1"></div>
 
     <!-- Search bar -->
-    <form class="reveal in d-5 relative mt-12 bg-cream/95 backdrop-blur-md border border-ink/10 rounded-full p-1.5 pl-2 grid grid-cols-1 md:grid-cols-[1.2fr_1.2fr_0.8fr_auto] items-stretch gap-0 shadow-deep max-w-[920px]">
+    <form class="reveal in d-5 relative mt-12 bg-surface/90 backdrop-blur-md border border-ink/15 rounded-full p-1.5 pl-2 grid grid-cols-1 md:grid-cols-[1.2fr_1.2fr_0.8fr_auto] items-stretch gap-0 shadow-deep max-w-[920px]">
       <label class="field flex items-center gap-3 px-5 py-2 cursor-pointer">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="text-aegean">
           <path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/>
@@ -931,7 +948,7 @@
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="nasil" class="relative py-24 md:py-32 bg-cream/55 border-y border-ink/10">
+<section id="nasil" class="relative py-24 md:py-32 bg-surface/85 border-y border-ink/10">
   <div class="max-w-[1320px] mx-auto px-6">
     <div class="grid md:grid-cols-12 gap-10 items-end mb-14 reveal">
       <div class="md:col-span-7">
@@ -1515,7 +1532,7 @@
 </section>
 
 <!-- PRICING BREAKDOWN -->
-<section id="fiyat" class="relative py-24 md:py-32 bg-cream/55 border-y border-ink/10">
+<section id="fiyat" class="relative py-24 md:py-32 bg-surface/85 border-y border-ink/10">
   <div class="max-w-[1100px] mx-auto px-6">
     <div class="text-center max-w-[820px] mx-auto mb-14 reveal">
       <div class="ornament max-w-[280px] mx-auto mb-6">
@@ -1746,7 +1763,7 @@
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="referans" class="relative py-28 md:py-36 bg-cream/55 border-y border-ink/10 grain">
+<section id="referans" class="relative py-28 md:py-36 bg-surface/85 border-y border-ink/10 grain">
   <div class="max-w-[1320px] mx-auto px-6">
     <div class="text-center max-w-[820px] mx-auto mb-16 reveal">
       <div class="ornament max-w-[280px] mx-auto mb-6">
@@ -2070,7 +2087,7 @@
 </section>
 
 <!-- JOURNAL -->
-<section id="journal" class="relative py-24 md:py-32 bg-cream/55 border-t border-ink/10">
+<section id="journal" class="relative py-24 md:py-32 bg-surface/85 border-t border-ink/10">
   <div class="max-w-[1320px] mx-auto px-6">
     <div class="grid md:grid-cols-12 gap-10 items-end mb-14 reveal">
       <div class="md:col-span-7">
