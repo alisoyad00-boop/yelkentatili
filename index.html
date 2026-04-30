@@ -869,6 +869,7 @@
                class="card-img absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-aegean/60 via-aegean/10 to-transparent pointer-events-none"></div>
           <span class="absolute top-5 left-5 eyebrow bg-cream/95 text-aegean px-3 py-1.5 rounded-full z-10">Yelkenli · Bavaria 46</span>
+          <span class="absolute top-5 right-5 text-[12px] font-bold bg-ember-2 text-white px-2.5 py-1 rounded-md z-10" data-en="-15%">-15%</span>
         </div>
         <div class="mt-6 flex items-end justify-between gap-4">
           <div>
@@ -898,6 +899,7 @@
                class="card-img absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-aegean/55 via-aegean/10 to-transparent pointer-events-none"></div>
           <span class="absolute top-5 left-5 eyebrow bg-cream/95 text-aegean px-3 py-1.5 rounded-full z-10">Yelkenli · Sun Odyssey 49</span>
+          <span class="absolute top-5 right-5 text-[12px] font-bold bg-ember-2 text-white px-2.5 py-1 rounded-md z-10" data-en="-12%">-12%</span>
         </div>
         <div class="mt-6 flex items-end justify-between gap-4">
           <div>
@@ -925,6 +927,7 @@
                class="card-img absolute inset-0 w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-aegean/55 via-aegean/10 to-transparent pointer-events-none"></div>
           <span class="absolute top-5 left-5 eyebrow bg-cream/95 text-aegean px-3 py-1.5 rounded-full z-10">Catamaran · Lagoon 42</span>
+          <span class="absolute top-5 right-5 text-[12px] font-bold bg-ember-2 text-white px-2.5 py-1 rounded-md z-10" data-en="-18%">-18%</span>
         </div>
         <div class="mt-6 flex items-end justify-between gap-4">
           <div>
@@ -1164,11 +1167,12 @@
       </svg>
     </div>
 
-    <!-- routes grid -->
-    <ol class="grid md:grid-cols-3 gap-x-8 gap-y-14">
+    <!-- routes carousel (Sailogy-style horizontal scroll) -->
+    <ol class="flex gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory pb-6 -mx-6 px-6 scroll-smooth"
+        style="scrollbar-color: #4A7BFF #1F2733; scrollbar-width: thin;">
       <!-- 1 -->
-      <li class="reveal">
-        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2">
+      <li class="reveal snap-start shrink-0 w-[260px] md:w-[300px]">
+        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2 rounded-xl">
           <svg class="card-img absolute inset-0 w-full h-full" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <rect width="400" height="500" fill="url(#g-day)"/>
             <circle cx="320" cy="120" r="38" fill="url(#sun-glow)"/>
@@ -1194,8 +1198,8 @@
         <a class="linkline mt-4 inline-block text-cream/90 text-[13.5px]">Rotaya bak →</a>
       </li>
       <!-- 2 -->
-      <li class="reveal d-1">
-        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2">
+      <li class="reveal d-1 snap-start shrink-0 w-[260px] md:w-[300px]">
+        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2 rounded-xl">
           <svg class="card-img absolute inset-0 w-full h-full" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <rect width="400" height="500" fill="url(#g-dawn)"/>
             <line x1="0" y1="260" x2="400" y2="260" stroke="#FBF6EA" stroke-width="0.4" opacity="0.32"/>
@@ -1219,8 +1223,8 @@
         <a class="linkline mt-4 inline-block text-cream/90 text-[13.5px]">Rotaya bak →</a>
       </li>
       <!-- 3 -->
-      <li class="reveal d-2">
-        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2">
+      <li class="reveal d-2 snap-start shrink-0 w-[260px] md:w-[300px]">
+        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2 rounded-xl">
           <svg class="card-img absolute inset-0 w-full h-full" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <rect width="400" height="500" fill="url(#g-dusk)"/>
             <circle cx="120" cy="125" r="44" fill="url(#sun-glow)"/>
@@ -1249,8 +1253,8 @@
         <a class="linkline mt-4 inline-block text-cream/90 text-[13.5px]">Rotaya bak →</a>
       </li>
       <!-- 4 -->
-      <li class="reveal">
-        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2">
+      <li class="reveal snap-start shrink-0 w-[260px] md:w-[300px]">
+        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2 rounded-xl">
           <svg class="card-img absolute inset-0 w-full h-full" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <rect width="400" height="500" fill="url(#g-day)"/>
             <line x1="0" y1="240" x2="400" y2="240" stroke="#FBF6EA" stroke-width="0.4" opacity="0.32"/>
@@ -1274,8 +1278,8 @@
         <a class="linkline mt-4 inline-block text-cream/90 text-[13.5px]">Rotaya bak →</a>
       </li>
       <!-- 5 -->
-      <li class="reveal d-1">
-        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2">
+      <li class="reveal d-1 snap-start shrink-0 w-[260px] md:w-[300px]">
+        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2 rounded-xl">
           <svg class="card-img absolute inset-0 w-full h-full" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <rect width="400" height="500" fill="url(#g-dawn)"/>
             <circle cx="280" cy="115" r="40" fill="url(#sun-glow)"/>
@@ -1301,8 +1305,8 @@
         <a class="linkline mt-4 inline-block text-cream/90 text-[13.5px]">Rotaya bak →</a>
       </li>
       <!-- 6 -->
-      <li class="reveal d-2">
-        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2">
+      <li class="reveal d-2 snap-start shrink-0 w-[260px] md:w-[300px]">
+        <div class="relative overflow-hidden aspect-[4/5] bg-aegean-2 rounded-xl">
           <svg class="card-img absolute inset-0 w-full h-full" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <rect width="400" height="500" fill="url(#g-day)"/>
             <line x1="0" y1="240" x2="400" y2="240" stroke="#FBF6EA" stroke-width="0.4" opacity="0.32"/>
@@ -1481,50 +1485,81 @@
       </div>
       <h2 class="display text-[42px] md:text-[60px] tracking-tight3 leading-[1.04] text-aegean"
           style="font-variation-settings: 'opsz' 144, 'SOFT' 80, 'wght' 380;"
-          data-en="Three things that keep a holiday a <em class=&quot;display-italic&quot;>holiday</em><span class=&quot;text-ink/70&quot;>.</span>">
-        Tatilin <em class="display-italic">tatil</em> kalmasını sağlayan üç şey<span class="text-ink/70">.</span>
+          data-en="Why choose <em class=&quot;display-italic&quot;>us</em>.">
+        Neden <em class="display-italic">biz</em>.
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-12 md:gap-16">
-      <div class="reveal v-rule pl-8">
-        <svg width="38" height="38" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-aegean mb-7">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-y-12 gap-x-6 md:gap-x-4 relative">
+      <!-- Dotted connector (desktop only) -->
+      <div class="hidden md:block absolute top-[26px] left-[10%] right-[10%] border-t border-dashed border-electric/35 pointer-events-none"></div>
+
+      <!-- 1 -->
+      <div class="reveal text-center relative">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-electric mx-auto mb-5 bg-paper px-2 box-content relative">
           <circle cx="24" cy="14" r="6"/>
           <circle cx="14" cy="34" r="5"/>
           <circle cx="34" cy="34" r="5"/>
           <path d="M24 20 L 24 30 M 19 30 H 29"/>
         </svg>
-        <h3 class="display text-[28px] tracking-tight2 text-ink"
-            style="font-variation-settings: 'opsz' 144, 'SOFT' 70, 'wght' 420;">Mürettebat ve şef</h3>
-        <p class="text-[15px] text-ink/72 mt-3 leading-[1.75]">
-          Kaptan, mürettebat ve isteğe bağlı şef. Hiçbir şey düşünmeyin —
-          rota seçin, gelin, akşam koyda kahve yudumlayın.
+        <h3 class="display text-[18px] tracking-tight2 text-electric font-semibold" data-en="Crew &amp; chef">Mürettebat ve şef</h3>
+        <p class="text-[13px] text-ink/70 mt-2.5 leading-[1.65] max-w-[22ch] mx-auto"
+           data-en="Captain, crew and an optional chef — you only pick the route.">
+          Kaptan, mürettebat ve isteğe bağlı şef. Siz sadece rotayı seçin.
         </p>
       </div>
-      <div class="reveal d-1 v-rule pl-8">
-        <svg width="38" height="38" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-aegean mb-7">
+
+      <!-- 2 -->
+      <div class="reveal d-1 text-center relative">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-electric mx-auto mb-5 bg-paper px-2 box-content relative">
+          <path d="M14 24 L 22 32 L 38 16" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="24" cy="24" r="20"/>
+        </svg>
+        <h3 class="display text-[18px] tracking-tight2 text-electric font-semibold" data-en="No middlemen">Aracısız fiyat</h3>
+        <p class="text-[13px] text-ink/70 mt-2.5 leading-[1.65] max-w-[22ch] mx-auto"
+           data-en="Boats are ours, no commission chain — single point of contact.">
+          Tekneler bizim, komisyon zinciri yok — tek temas noktası.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="reveal d-2 text-center relative">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-electric mx-auto mb-5 bg-paper px-2 box-content relative">
           <rect x="6" y="10" width="36" height="32" rx="3"/>
           <path d="M6 18h36 M16 4v10 M32 4v10"/>
-          <circle cx="24" cy="30" r="4"/>
-          <path d="M24 26 L 24 30 L 27 32"/>
         </svg>
-        <h3 class="display text-[28px] tracking-tight2 text-ink"
-            style="font-variation-settings: 'opsz' 144, 'SOFT' 70, 'wght' 420;">Esnek iptal</h3>
-        <p class="text-[15px] text-ink/72 mt-3 leading-[1.75]">
-          Rezervasyondan 60 gün öncesine kadar tam iade.
-          Hava muhalefetinde rota değişikliği masrafsızdır.
+        <h3 class="display text-[18px] tracking-tight2 text-electric font-semibold" data-en="Flexible cancel">Esnek iptal</h3>
+        <p class="text-[13px] text-ink/70 mt-2.5 leading-[1.65] max-w-[22ch] mx-auto"
+           data-en="Full refund up to 60 days before. Weather reroutes are on us.">
+          60 gün öncesine kadar tam iade. Hava değişikliklerinde rota bizden.
         </p>
       </div>
-      <div class="reveal d-2 v-rule pl-8">
-        <svg width="38" height="38" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-aegean mb-7">
+
+      <!-- 4 -->
+      <div class="reveal d-1 text-center relative">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-electric mx-auto mb-5 bg-paper px-2 box-content relative">
           <path d="M24 4 L 40 12 V 26 C 40 36 32 42 24 44 C 16 42 8 36 8 26 V 12 Z"/>
-          <path d="M18 24 L 22 28 L 30 18"/>
+          <path d="M18 24 L 22 28 L 30 18" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <h3 class="display text-[28px] tracking-tight2 text-ink"
-            style="font-variation-settings: 'opsz' 144, 'SOFT' 70, 'wght' 420;">Sahile özel hizmet</h3>
-        <p class="text-[15px] text-ink/72 mt-3 leading-[1.75]">
-          Liman karşılaması, transfer, market, balıkçı pazarı,
-          özel rota planlaması. Türkçe veya İngilizce, fark etmez.
+        <h3 class="display text-[18px] tracking-tight2 text-electric font-semibold" data-en="Türkiye expert">Türkiye uzmanlığı</h3>
+        <p class="text-[13px] text-ink/70 mt-2.5 leading-[1.65] max-w-[22ch] mx-auto"
+           data-en="14 years on the Aegean &amp; Mediterranean coast — local crews only.">
+          14 yıldır Ege ve Akdeniz sahili — yalnızca yerel ekipler.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="reveal d-2 text-center relative">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" class="text-electric mx-auto mb-5 bg-paper px-2 box-content relative">
+          <path d="M8 26 V 22 C 8 13 15 6 24 6 C 33 6 40 13 40 22 V 26"/>
+          <rect x="6" y="26" width="8" height="14" rx="2"/>
+          <rect x="34" y="26" width="8" height="14" rx="2"/>
+          <path d="M40 40 V 42 C 40 44 38 46 36 46 H 28"/>
+        </svg>
+        <h3 class="display text-[18px] tracking-tight2 text-electric font-semibold" data-en="24/7 TR/EN">7/24 TR/EN destek</h3>
+        <p class="text-[13px] text-ink/70 mt-2.5 leading-[1.65] max-w-[22ch] mx-auto"
+           data-en="Our team is on call throughout your charter — in Turkish or English.">
+          Sefer süresince ekibimiz arandığında ulaşılır — TR veya EN.
         </p>
       </div>
     </div>
@@ -1964,7 +1999,7 @@
     </div>
 
     <div class="border-t border-ink/15">
-      <details class="group border-b border-ink/15 reveal">
+      <details class="group reveal mb-3 bg-surface/60 border border-ink/10 rounded-xl px-5 hover:bg-surface transition-colors">
         <summary class="flex items-start justify-between gap-6 py-6 cursor-pointer list-none">
           <div class="flex items-start gap-5">
             <span class="display num text-[14px] text-aegean/70 mt-1.5 num"
@@ -1981,7 +2016,7 @@
         </div>
       </details>
 
-      <details class="group border-b border-ink/15 reveal d-1">
+      <details class="group reveal d-1 mb-3 bg-surface/60 border border-ink/10 rounded-xl px-5 hover:bg-surface transition-colors">
         <summary class="flex items-start justify-between gap-6 py-6 cursor-pointer list-none">
           <div class="flex items-start gap-5">
             <span class="display num text-[14px] text-aegean/70 mt-1.5 num"
@@ -1998,7 +2033,7 @@
         </div>
       </details>
 
-      <details class="group border-b border-ink/15 reveal d-2">
+      <details class="group reveal d-2 mb-3 bg-surface/60 border border-ink/10 rounded-xl px-5 hover:bg-surface transition-colors">
         <summary class="flex items-start justify-between gap-6 py-6 cursor-pointer list-none">
           <div class="flex items-start gap-5">
             <span class="display num text-[14px] text-aegean/70 mt-1.5 num"
@@ -2015,7 +2050,7 @@
         </div>
       </details>
 
-      <details class="group border-b border-ink/15 reveal">
+      <details class="group reveal mb-3 bg-surface/60 border border-ink/10 rounded-xl px-5 hover:bg-surface transition-colors">
         <summary class="flex items-start justify-between gap-6 py-6 cursor-pointer list-none">
           <div class="flex items-start gap-5">
             <span class="display num text-[14px] text-aegean/70 mt-1.5 num"
@@ -2032,7 +2067,7 @@
         </div>
       </details>
 
-      <details class="group border-b border-ink/15 reveal d-1">
+      <details class="group reveal d-1 mb-3 bg-surface/60 border border-ink/10 rounded-xl px-5 hover:bg-surface transition-colors">
         <summary class="flex items-start justify-between gap-6 py-6 cursor-pointer list-none">
           <div class="flex items-start gap-5">
             <span class="display num text-[14px] text-aegean/70 mt-1.5 num"
@@ -2049,7 +2084,7 @@
         </div>
       </details>
 
-      <details class="group border-b border-ink/15 reveal d-2">
+      <details class="group reveal d-2 mb-3 bg-surface/60 border border-ink/10 rounded-xl px-5 hover:bg-surface transition-colors">
         <summary class="flex items-start justify-between gap-6 py-6 cursor-pointer list-none">
           <div class="flex items-start gap-5">
             <span class="display num text-[14px] text-aegean/70 mt-1.5 num"
@@ -2066,7 +2101,7 @@
         </div>
       </details>
 
-      <details class="group border-b border-ink/15 reveal">
+      <details class="group reveal mb-3 bg-surface/60 border border-ink/10 rounded-xl px-5 hover:bg-surface transition-colors">
         <summary class="flex items-start justify-between gap-6 py-6 cursor-pointer list-none">
           <div class="flex items-start gap-5">
             <span class="display num text-[14px] text-aegean/70 mt-1.5 num"
