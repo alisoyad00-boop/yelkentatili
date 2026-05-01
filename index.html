@@ -309,15 +309,8 @@
     pointer-events: none;
   }
 
-  /* Section number plate */
-  .secnum {
-    font-family: 'Fraunces', Georgia, serif;
-    font-variation-settings: 'opsz' 12, 'SOFT' 0, 'wght' 400;
-    font-style: italic;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    color: var(--aegean);
-  }
+  /* Section number plate — hidden per design */
+  .secnum { display: none; }
 
   /* Mobile-first responsive refinements */
   @media (max-width: 768px) {
@@ -1017,8 +1010,8 @@
     <ol class="grid md:grid-cols-3 gap-8 md:gap-12">
       <li class="reveal">
         <div class="flex items-start gap-5">
-          <div class="display num text-[68px] leading-[0.85] text-aegean opacity-90"
-               style="font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 360;font-style:italic;">01</div>
+          <div class="display num text-[68px] leading-[0.85] text-electric"
+               style="font-variation-settings: 'opsz' 144, 'SOFT' 30, 'wght' 580;font-style:italic;">01</div>
           <div class="pt-3 flex-1 border-t border-ink/15">
             <span class="eyebrow text-electric" data-en="5 minutes">5 dakika</span>
             <h3 class="display text-[24px] tracking-tight2 mt-2"
@@ -1035,8 +1028,8 @@
 
       <li class="reveal d-1">
         <div class="flex items-start gap-5">
-          <div class="display num text-[68px] leading-[0.85] text-aegean opacity-90"
-               style="font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 360;font-style:italic;">02</div>
+          <div class="display num text-[68px] leading-[0.85] text-electric"
+               style="font-variation-settings: 'opsz' 144, 'SOFT' 30, 'wght' 580;font-style:italic;">02</div>
           <div class="pt-3 flex-1 border-t border-ink/15">
             <span class="eyebrow text-electric" data-en="Within 24 hours">24 saat içinde</span>
             <h3 class="display text-[24px] tracking-tight2 mt-2"
@@ -1053,8 +1046,8 @@
 
       <li class="reveal d-2">
         <div class="flex items-start gap-5">
-          <div class="display num text-[68px] leading-[0.85] text-aegean opacity-90"
-               style="font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 360;font-style:italic;">03</div>
+          <div class="display num text-[68px] leading-[0.85] text-electric"
+               style="font-variation-settings: 'opsz' 144, 'SOFT' 30, 'wght' 580;font-style:italic;">03</div>
           <div class="pt-3 flex-1 border-t border-ink/15">
             <span class="eyebrow text-electric" data-en="In season">Sezonda</span>
             <h3 class="display text-[24px] tracking-tight2 mt-2"
@@ -1582,9 +1575,9 @@
       <!-- Included -->
       <div class="bg-paper border border-ink/12 p-7 md:p-10">
         <div class="flex items-center gap-3 mb-7 pb-5 border-b border-ink/10">
-          <span class="w-8 h-8 rounded-full bg-aegean text-cream flex items-center justify-center text-[15px]">✓</span>
-          <h3 class="display text-[22px] tracking-tight2 text-aegean"
-              style="font-variation-settings: 'opsz' 144, 'SOFT' 80, 'wght' 460;"
+          <span class="w-8 h-8 rounded-full bg-electric/15 border border-electric/40 text-electric flex items-center justify-center text-[15px]">✓</span>
+          <h3 class="display text-[22px] tracking-tight2 text-ink"
+              style="font-variation-settings: 'opsz' 144, 'SOFT' 30, 'wght' 500;"
               data-en="Included">Dahil olan</h3>
         </div>
         <ul class="space-y-4 text-[14.5px] text-ink/82">
